@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+
+	<constant name="struts.devMode" value="false" />
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+
+	<package name="user" namespace="/" extends="struts-default,json-default">
+		<action name="*_*" class="com.car.action.{1}Action" method="{2}">
+			<result type="json">
+				<param name="root">jsonResult</param>
+			</result>
+		</action>
+	</package>
+
+	<package name="admin" namespace="/admin" extends="struts-default,json-default">
+		<action name="*_*" class="com.car.admin.action.{1}Action"
+			method="{2}">
+			<result type="json">
+				<param name="root">jsonResult</param>
+			</result>
+			<result name="logout"  type="redirectAction">../index</result>
+			<result>{2}.jsp</result>
+		</action>
+	</package>
+	
+	<package name="company" namespace="/company" extends="struts-default,json-default">
+		<action name="*_*" class="com.car.admin.action.{1}Action"
+			method="{2}">
+			<result type="json">
+				<param name="root">jsonResult</param>
+			</result>
+			<result>{2}.jsp</result>
+		</action>
+	</package>
+
+	<package name="store" namespace="/store" extends="struts-default,json-default">
+		<action name="*_*" class="com.car.admin.action.{1}Action"
+			method="{2}">
+			<result type="json">
+				<param name="root">jsonResult</param>
+			</result>
+			<result>{2}.jsp</result>
+		</action>
+	</package>
+	
+	<package name="default" namespace="/" extends="struts-default">
+		<action name="index">
+			<result>login.jsp</result>
+		</action>
+	</package>
+	
+</struts>

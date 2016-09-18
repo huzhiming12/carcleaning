@@ -1,0 +1,50 @@
+.addP{
+	font-size: 14px;
+	height: 40px;
+	line-height: 40px;
+	width: 400px;
+}
+.addInp{
+	display: block;
+	width: 400px;
+	height: 35px;
+	border: none;
+	border: 1px solid #cdcdcd;
+	border-radius: 8px;
+	padding-left: 10px;
+	outline: none;
+	margin-bottom: 10px;
+}
+.daterangepicker{
+	display: none;
+}
+.addBtn,.btn-sm,.tagBtn{
+	border: none;
+	background-color: #fdbf18;
+	width: 80px;
+	height: 35px;
+	font-size: 14px;
+	border-radius: 5px;
+	margin-top: 10px;
+	outline: none;
+	transition: all 0.5s;
+}
+.tagBtn:hover{
+	background-color: #F7F7F7 !important;
+	border: 1px solid #FDBE16 !important;
+}
+.calendar{
+	top: 414px !important;
+	left: 230px !important;
+}
+.input-mini{
+	border: none !important;
+	outline: none !important;
+	width: 80% !important;
+}
+.daterangepicker{
+	min-width: 725px !important;
+}
+.daterangepicker.opensright .calendar{
+	float: left !important;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html class="login-bg">
+<head>
+	<title>洗车助手</title>
+    
+	 <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- bootstrap -->
+   
+    <link href="admin/css/bootstrap.css" rel="stylesheet" />
+    <link href="admin/css/bootstrap-responsive.css" rel="stylesheet" />
+    <link href="admin/css/bootstrap-overrides.css" rel="stylesheet" /> 
+
+    <!-- global styles -->
+    <link rel="stylesheet" href="admin/css/layout.css" />
+    <link rel="stylesheet"  href="admin/css/elements.css" />
+    <link rel="stylesheet"  href="admin/css/icons.css"/>
+    <link rel="stylesheet"  href="admin/css/signin.css"/>
+    <!-- this page specific styles -->
+   <link rel="stylesheet" href="admin/css/tables.css"  media="screen" />
+   <link rel="shortcut icon" href="admin/img/car.jpg">
+   </head>
+<body>
+    <div class="row-fluid login-wrapper">
+        <a >
+            
+        </a>
+
+        <div class="span4 box">
+            <div class="content-wrap">
+                <h6>洗车助手管理系统</h6>
+                <input class="span12" type="text" placeholder="用户名" id="count" />
+                <input class="span12" type="password" placeholder="密码" id="pass" />
+                <div class="remember">
+                    <input id="remember-me" type="checkbox" />
+                    <label for="remember-me">记住我</label>
+                </div>
+                <a class="btn btn-warning" href="index.html" id="login">登录</a>
+            </div>
+        </div>
+
+       
+    </div>
+
+	<!-- scripts -->
+    <script src="http://123.57.151.190/theCar/public/js/jquery2.1.4.min.js"></script>
+    <script src="http://123.57.151.190/theCar/public/js/bootstrap.min.js"></script>
+    <script src="http://123.57.151.190/theCar/public/js/theme.js"></script>
+    <script src="http://123.57.151.190/theCar/public/js/exit.js"></script>
+
+    <!-- pre load bg imgs -->
+    <script type="text/javascript">
+        // $(function () {
+        //     // bg switcher
+        //     var $btns = $(".bg-switch .bg");
+        //     $btns.click(function (e) {
+        //         e.preventDefault();
+        //         $btns.removeClass("active");
+        //         $(this).addClass("active");
+        //         var bg = $(this).data("img");
+
+        //         $("html").css("background-image", "url('img/bgs/" + bg + "')");
+        //     });
+
+        // });
+
+
+        var subm = document.getElementById("login");
+     var co = document.getElementById("count");
+     var pa = document.getElementById("pass");
+     // var telreg = /(13\d|14[57]|15[^4,\D]|17[678]|18\d)\d{8}|170[059]\d{7}/;
+      subm.onclick = function(event){
+       event.preventDefault();
+              if(co.value!="" && pa.value!=""){
+                  var json = {};
+                  json.count = co.value;
+                  json.pass = pa.value;
+                  console.log(JSON.stringify(json));
+                  $.ajax(
+                         {
+                         type:"POST",
+                         url:'/theCar/index.php/Admin/login',
+                         async:true,
+                         data:json,
+                         success:function(data) {
+                         var sta = JSON.parse(data);
+                         console.log(sta.success);
+                         if(sta.success == 0){
+                         var shop_name = sta.shop_name;
+                         if (sta.shop_name=="超级管理员"){
+                          window.location.href='/theCar/index.php/welcome/appointmentList';
+                         }else{
+                          window.location.href='/theCar/index.php/welcome/app';
+                         }
+                         
+                         }else{
+                         alert('登录失败');
+                         }
+                         },
+                         error:function(){
+                        alert('网络有错误');
+                         }
+                         });
+              }else{
+                  alert('输入信息有误');
+              }
+      }      
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+.lock2 {
+	width: 16px;
+	height: 16px;
+	margin-top: 7px;
+}
+
+tr td, tr th {
+	width: 300px !important;
+	height: 50px !important;
+}
+
+.chewei {
+	display: block;
+	width: 80%;
+	margin: auto;
+	background-color: #92e5b3;
+	text-align: center;
+	border-radius: 5px;
+	height: 30px;
+	line-height: 30px;
+}
+
+.lock3 {
+	display: block;
+	width: 80%;
+	margin: auto;
+	background-color: #fdbf18;
+	text-align: center;
+	border-radius: 5px;
+	height: 30px;
+	line-height: 30px;
+}
+
+.adminVip {
+	vertical-align: top;
+}
+
+.chewei-lock {
+	display: block;
+	width: 80%;
+	margin: auto;
+	background-color: #dcdcdc;
+	text-align: center;
+	border-radius: 5px;
+	height: 30px;
+	line-height: 30px;
+}

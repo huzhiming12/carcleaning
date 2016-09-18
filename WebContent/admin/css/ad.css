@@ -1,0 +1,54 @@
+.addManager{
+	margin-bottom: 30px;
+}
+.manaBtn2,.manaBtn3,.companyAdBtn,.btn-sm,.shopAdBtn,.delAdBtn{
+	border: none;
+	width: 70px;
+	height: 28px;
+	background-color: #FDBE16;
+	color: #000000;
+	outline: none;
+	border-radius: 4px;
+	cursor: hand;
+	transition: all 0.5s;
+}
+.manaBtn2,.manaBtn3{
+	width: 160px !important;
+}
+.manaBtn2:hover,.manaBtn3:hover,.companyAdBtn:hover,.shopAdBtn:hover,.delAdBtn:hover{
+	background-color: #F7F7F7 !important;
+	border: 1px solid #FDBE16 !important;
+}
+.daterangepicker{
+	display: none;
+}
+.page{
+	margin-bottom: 30px;
+}
+.daterangepicker{
+	min-width: 725px !important;
+}
+.daterangepicker.opensright .calendar{
+	float: left !important;
+}
+.calendar{
+	top: 414px !important;
+	left: 230px !important;
+}
+.input-mini{
+	border: none !important;
+	outline: none !important;
+	width: 80% !important;
+}
+.shopAdFrom{
+	display: none;
+}
+.adImg{
+	width: 120px;
+	height: 30px;
+	margin-top: 15px;
+}
+.addSelect{
+	width: 412px !important;
+}
+

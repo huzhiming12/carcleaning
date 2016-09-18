@@ -1,0 +1,65 @@
+.adminVip{
+	border: none;
+	width: 70px;
+	height: 28px;
+	background-color: #FDBE16;
+	color: #000000;
+	outline: none;
+	border-radius: 4px;
+	cursor: hand;
+}
+.accountBtn,.accountBtn2,.accountBtn3,.addBtn{
+	border: none;
+	width: 70px;
+	height: 28px;
+	background-color: #FDBE16;
+	color: #000000;
+	outline: none;
+	border-radius: 4px;
+	cursor: hand;
+	transition: all 0.5s;
+}
+.addManager{
+	margin-bottom: 30px;
+}
+.accountBtn2,.accountBtn3{
+	width: 160px !important;
+}
+.accountBtn:hover,.accountBtn2:hover,.accountBtn3:hover,.addBtn:hover{
+	/*background-color: #e9ab05 !important;*/
+	background-color: #F7F7F7 !important;
+	border: 1px solid #FDBE16 !important;
+}
+.sou{
+	float: right;
+	width: 300px;
+	height: 35px;
+	position: relative;
+	margin-top: 34px;
+	margin-right: 30px;
+}
+.souInp{
+	border: none;
+	outline: none;
+	background-color: #F7F7F7;
+	border: 1px solid grey;
+	height: 30px;
+	width: 100%;
+	border-radius: 8px;
+	
+	padding: 0 15px;
+	/*margin-right: 30px;*/
+}
+.souImg{
+	width: 15px;
+	position: absolute;
+	right: -10px;
+	top: 9px;
+}
+.addSelect{
+	width: 412px !important;
+}
+.addFrom{
+	display: none;
+}
+

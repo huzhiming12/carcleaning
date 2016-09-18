@@ -1,0 +1,59 @@
+.adminVip,.accountBtn2,.accountBtn3,.addAdminBtn{
+	border: none;
+	width: 70px;
+	height: 28px;
+	background-color: #FDBE16;
+	color: #000000;
+	outline: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+.accountBtn2,.accountBtn3{
+	width: 160px !important;
+}
+.adminVip:hover,.accountBtn2:hover,.accountBtn3:hover,.addAdminBtn:hover{
+	background-color: #F7F7F7 !important;
+	border: 1px solid #FDBE16 !important;
+}
+.addManager{
+	margin-bottom: 30px;
+}
+.addP2{
+	font-size: 14px;
+	height: 40px;
+	line-height: 40px;
+	width: 300px;
+}
+.addInp{
+	display: block;
+	width: 300px !important;
+	height: 35px;
+	border: none;
+	border: 1px solid #cdcdcd;
+	border-radius: 8px;
+	padding-left: 10px;
+	outline: none;
+	margin-bottom: 10px;
+}
+.addInp2{
+	display: block;
+	width: 300px !important;
+	height: 35px;
+	border: none;
+	border: 1px solid #cdcdcd;
+	border-radius: 8px;
+	padding-left: 10px;
+	outline: none;
+	margin-bottom: 10px;
+}
+.addSelect{
+	width: 312px !important;
+}
+.addAdminFrom{
+	display: none;
+}
+.addAdminBtn{
+	margin-top: 30px;
+}
+
